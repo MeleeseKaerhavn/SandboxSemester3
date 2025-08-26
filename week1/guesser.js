@@ -23,3 +23,10 @@ function compare(){
         document.getElementById("hint").textContent= "for lavt!";
     };
 };
+
+document.querySelector("#replay").addEventListener("click", replay);
+
+function replay(){
+    window.location.reload();
+}
+
