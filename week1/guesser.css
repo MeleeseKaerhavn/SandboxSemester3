@@ -1,0 +1,17 @@
+body{
+    margin: 150px 40cqw;
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+    
+    
+    .hide { display: none; }
+
+    #replay{
+        position: absolute;
+        transform: translate(100%);
+    }
+
+
+ 
