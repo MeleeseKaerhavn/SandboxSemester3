@@ -12,27 +12,14 @@ document.querySelector("#knap").addEventListener("click", compare);
 function compare(){
     let gæt = readInput();
     console.log("Gæt: " + gæt);
-    // here you can also compare gæt with your random number
+    if (gæt === tilfældigeTal){
+        document.getElementById("hint").textContent= "korrekt!";
+        document.querySelector(".hide").classList.remove("hide");
+    }
+    else if (gæt > tilfældigeTal){
+        document.getElementById("hint").textContent= "for højt!";
+    }
+    else {
+        document.getElementById("hint").textContent= "for lavt!";
+    };
 };
-
-
-
-
-// document.querySelector("#knap").addEventListener("click", readInput);
-
-
-// function readInput(){
-    
-//     let gæt = document.getElementById("userGuess").value;
-//     console.log("Gæt: " + gæt);
-//     return gæt;
-// }
-
-// console.log("Gæt: " + gæt);
-
-
-
-
-
-
-// document.querySelector(#hint).add("for højt");
