@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../../../Downloads/rockpaperscissors"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "rockpaperscissors"
+	}
+}
