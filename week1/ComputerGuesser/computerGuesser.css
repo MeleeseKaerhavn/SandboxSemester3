@@ -1,22 +1,85 @@
 
 
-
-body{
-    margin: 150px 40cqw;
-    background-color: black;
-    color: aliceblue;
-    font-family: 'Courier New', Courier, monospace;
+ /* --- Base --------------------------------------------------------------- */
+* { box-sizing: border-box; }
+:root{
+  --bg: #000;
+  --panel: #0e0e10;
+  --fg: aliceblue;
+  --muted: #c9d6e2;
+  --border: rgba(255,255,255,.12);
+  --accent: #7fd6ff;             /* soft cyan accent */
+  --glow: rgba(127,214,255,.25);
 }
-    div{
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-    }
 
-    #start{
-        margin: 20px;
-    }
-    
-    .hide { display: none; }
+html, body { height: 100%; }
+body{
+  margin: 0;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Courier New", Courier, monospace;
+}
 
+
+/* --- Headings ----------------------------------------------------------- */
+h1{
+  margin: 0 0 4px;
+  font-size: clamp(28px, 5vw, 46px);
+  line-height: 1.05;
+}
+h2{
+  margin: 0 0 12px;
+  font-size: clamp(18px, 3.2vw, 26px);
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.big{
+    font-size: clamp(28px, 5vw, 46px);
+     line-height: 1.05;
+}
+
+input[type="text"]{
+  flex: 1;
+  padding: .85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0a0a0b;
+  color: var(--fg);
+  outline: none;
+}
+input[type="text"]:focus{
+  border-color: var(--accent);
+  box-shadow: 0 0 0 5px var(--glow);
+}
+
+button{
+  padding: .8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #141416;
+  color: var(--fg);
+  font-weight: 800;
+  cursor: pointer;
+  transition: border-color .2s, box-shadow .2s, transform .05s, background .2s;
+}
+button:hover{
+  border-color: var(--accent);
+  box-shadow: 0 0 14px var(--glow);
+}
+button:active{ transform: translateY(1px); }
+
+/* --- Actions (Højere/Lavere/Korrekt) ----------------------------------- */
+.actions{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+/* --- Misc --------------------------------------------------------------- */
+.hide{ display: none; }
 
