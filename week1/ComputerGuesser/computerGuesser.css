@@ -1,0 +1,22 @@
+
+
+
+body{
+    margin: 150px 40cqw;
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    #start{
+        margin: 20px;
+    }
+    
+    .hide { display: none; }
+
+
