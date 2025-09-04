@@ -1,0 +1,11 @@
+/* ul {
+      list-style: none;
+      display: flex;
+    } */
+
+
+nav ul { list-style: none; display: flex; gap: .5rem; padding: 0; }
+nav li::after { content: "/"; margin-left: .5rem; color: #999; }
+nav li:last-child::after { content: ""; }              /* no slash after last */
+nav a { text-decoration: none; color: #0a58ca; }
+nav [aria-current="page"] { font-weight: 600; color: #111; }
