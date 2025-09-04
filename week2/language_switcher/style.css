@@ -1,0 +1,96 @@
+/* ====== base ====== */
+:root{
+  --teal-700: #5a8f91;
+  --teal-800: #2e6f70;   /* borders / accents */
+  --paper:    #f6f1cf;   /* page background */
+  --panel:    #e8f1f6;   /* content bg */
+  --orange:   #c76122;   /* footer */
+  --white:    #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #0f2b2c;
+  background: var(--paper);
+}
+
+/* A centered frame with left/right borders like the screenshot */
+body > .frame,
+body > main.frame { /* allow either wrapper or direct sections */
+  max-width: 1280px;
+  margin: 10px auto;
+  border-left: 2px solid var(--teal-800);
+  border-right: 2px solid var(--teal-800);
+}
+
+/* ====== header ====== */
+.header{
+  position: relative;
+  background: var(--teal-700);
+  border-top: 2px solid var(--teal-800);
+  border-bottom: 2px solid var(--teal-800);
+  padding: clamp(18px, 4vw, 32px) 24px;
+}
+
+/* outlined title like in the image */
+.site-title{
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(34px, 8vw, 72px);
+  line-height: 1;
+  color: transparent;                    /* hollow fill */
+  -webkit-text-stroke: 2.5px var(--white);
+  text-transform: none;
+  letter-spacing: 1px;
+}
+
+/* language select on the right */
+.lang-control{
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.lang-control label{ opacity: .95; }
+
+.lang-control select{
+  appearance: none;
+  padding: 6px 10px;
+  border: 2px solid var(--teal-800);
+  border-radius: 6px;
+  background: #ecf3f3;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ====== content panel ====== */
+.content{
+  background: var(--panel);
+  border-bottom: 2px solid var(--teal-800);
+  padding: 28px 24px 80px;
+  min-height: 260px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ====== footer bar ====== */
+.footer{
+  background: var(--orange);
+  color: var(--white);
+  font-weight: 800;
+  font-size: clamp(22px, 3.2vw, 36px);
+  padding: 14px 24px;
+  border-bottom: 2px solid var(--teal-800);
+}
+
+
