@@ -1,0 +1,13 @@
+#info{
+    display: none;
+}
+
+span{
+    background: yellow; 
+    /* font-weight: 600; */
+}
+
+div{
+    background-color: orange;
+    padding: 20px;
+}
