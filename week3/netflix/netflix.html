@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<title>Netflix Style Button</title>
+<style>
+  body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #111;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: #333; 
+  }
+
+  /* when animation runs */
+  .animate {
+    animation: fill 4s linear forwards;
+  }
+
+  @keyframes fill {
+    to(
+        background-position: left;
+    )
+  }
+</style>
+</head>
+<body>
+  <button id="next">Næste</button>
+
+  <script>
+    const btn = document.getElementById("next");
+    let skipped = false;
+
+    window.addEventListener("load", () => 
+      btn.classList.add("animate");
+
+      btn.addEventListener("animationend", () => {
+        if (!skipped) {
+          document.body.style.background = "red";
+        }
+      });
+
+      // if mouse moves anywhere → skip
+      window.addEventListener("mousemove", () => {
+        skipped = true;
+        btn.classList.remove("animate");
+        btn.style.backgroundColor = "royalblue"; // jump directly to filled
+      }, { once: true });
+    );
+  </script>
+</body>
+</html>
