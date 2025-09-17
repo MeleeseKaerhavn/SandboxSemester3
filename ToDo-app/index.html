@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>To Do</h1>
+        <div class="theme-switcher">
+        <label for="drop_down">Choose Theme</label>
+    <select name="theme" id="drop_down">
+      <option value="">Default</option>
+      <option value="halloween">Halloween</option>
+      <option value="birthday">Birthday</option>
+      <option value="goth">Gothic</option>
+      <option value="dogs">Dogs</option>
+    </select>
+        </div>
+    </header>
+
+    <main>
+        <div class="page_grid">
+            <aside id="lists">
+                <ul id="lists-ul">
+                    <h2>Lists</h2>
+                    <li>Liste 1</li>
+                    <li>Liste 2</li>
+                    <li>Liste 3</li>
+                    <li>Liste 4</li>
+                    <li>Liste 5</li>
+                </ul>
+            </aside>
+            <div id="todo" data-theme="">  
+                <h2 id="title-display"></h2>
+                <input id="list-title" type="text" placeholder="Listenavn" aria-label="List title" />
+
+                 <!-- simple add form -->
+                <form id="new-task" autocomplete="off">
+                    <input id="task-text" type="text" placeholder="What to do/buy…" required>
+                    <input id="task-qty" type="number" min="1" value="1" style="width:80px">
+                    <button>Add</button>
+                </form>
+                <h2>To Do</h2>
+                <ul id="todo-list" class="list">
+
+                </ul>
+
+
+                 <div id="done">
+                <h2>Done</h2>
+                <ul id="done-list" class="list"></ul>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
