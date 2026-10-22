@@ -146,6 +146,10 @@ nav a{
     transform: translateY(-20px);
 }
 
+.skills-grid.programmering > li:nth-child(2), .skills-grid.programmering > li:nth-child(3){
+    transform: translateY(25px);
+}
+
 .skills-grid.design > li:first-child img { transform: scale(.65);
 margin-bottom: -10px; }
 
@@ -235,7 +239,7 @@ margin-bottom: -10px; }
   margin: 0;
   font-family: var(--font-accent);
   color:  var(--lys_baggrund);
-  font-size: .9rem;
+  font-size: .7rem;
 }
 
 
